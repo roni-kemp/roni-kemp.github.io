@@ -8,7 +8,7 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            margin: 20px;
+            margin: 10px;
             background-color: #e1baa8;
         }
         .container {
@@ -18,7 +18,7 @@
         .logo img {
             max-width: 150px;
             height: auto;
-            margin-bottom: 20px;
+            /* margin-bottom: 20px; */
         }
         .video-container {
             text-align: center;
@@ -32,14 +32,44 @@
         .links {
             display: flex;
             justify-content: center;
+            /* margin: 20px; */
+        }
+        .links a {
+            display: inline-block;
+            margin: 5px; /* This margin value adds space around each link. Adjust as necessary */
+            text-decoration: none;
+            color: #333;
         }
         .links a:hover {
             text-decoration: underline;
+            margin-top: -1px;
         }
         .video-title {
             margin-bottom: 10px; /* Spacing between title and video */
             font-size: 18px;
         }
+
+        .links a::after {
+            content: attr(href); /* Display the URL stored in the href attribute */
+            position: absolute;
+            white-space: nowrap; /* Prevents the content from wrapping */
+            opacity: 0;
+            transition: opacity 0.5s;
+            color: black; /* Text color for the URL */
+            background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent background */
+            font-size: 12px;
+            padding: 2px 5px; /* Padding around the text */
+            border-radius: 4px; /* Rounded corners for the tooltip */
+            bottom: 100%; /* Position directly above the link */
+            left: 50%; /* Center the tooltip */
+            transform: translateX(-50%); /* Center the tooltip correctly */
+        }
+
+        .links a:hover::after {
+            opacity: 1; /* Make the URL visible on hover */
+        }
+
+
     </style>
 </head>
 <body>
@@ -51,13 +81,23 @@
                 Your browser does not support HTML video.
             </video>
             <div class="links">  
-                <a href="https://www.merozlab.com/"><img width="42" src="meroz_log_inverted.png" alt="Meroz Lab"></a>
-                <a href="https://twitter.com/MerozLab"><img width="42" src="twt_logo_1.png" alt="Meroz Lab on Twitter"></a>
-            </div>
+                <a href="https://www.merozlab.com/"><img width="42" src="link_logos\Firefox.png" alt="Meroz Lab"></a>
+                <a href="https://twitter.com/MerozLab"><img width="42" src="link_logos\Twitter.png" alt="Meroz Lab on Twitter"></a>
+                <a href="mailto:Ahronk@mail.tau.ac.il" id="emailLink" onclick="showEmail()"><img width="42" src="link_logos\Gmail.png" alt="Meroz Lab on Twitter"></a>
+            </div> 
             <div class="logo">
-                <img src="TAU_logo_1.png" alt="Institution Logo">
+                <img src="TAU_pxl.png" alt="Institution Logo">
             </div>
         </div>
     </div>
 </body>
+
+
+<script>
+    function showEmail() {
+        var link = document.getElementById('emailLink');
+        link.textContent = 'Ahronk@mail.tau.ac.il'; // Sets the text to your email
+    }
+</script>
+
 </html>

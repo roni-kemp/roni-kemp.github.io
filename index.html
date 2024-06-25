@@ -1,30 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <title> 
-  Plant tracking </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Share EMBO</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .logo img {
+            max-width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            margin-bottom: 20px;            
+        }
+        .links {
+            display: flex;
+            justify-content: center;
+        }
+        .links a {
+            display: inline-block;
+            margin: 20px 10px;
+            text-decoration: none;
+            color: #333;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
+<body>
+    <div class="container">
 
-<body style="margin:0;">
-
-
-<center>
-
-<video width="600" controls loop autoplay muted center>
-  <source src="Media1.mp4" type="video/mp4">
-  Your browser does not support HTML video.
-</video>
-
-<h1></h1>
-
-<a href="https://www.merozlab.com/"><img width="42" src="link.png"></a>
-
-<a href="https://twitter.com/MerozLab"><img width="42" src="twt_logo.png"></a>
-
-</center>
-
+        <h1>Plants Integrate Multiple Stimuli Using a Vectorial Representation</h1>
+        <p></p>
+        
+        <div class="video-container">
+            <video width="600" controls loop autoplay muted>
+              <source src="Media1.mp4" type="video/mp4">
+              Your browser does not support HTML video.
+            </video>
+            <div class="links">  
+              <a href="https://www.merozlab.com/"><img width="42" src="meroz_log_inverted.png" alt="Meroz Lab"></a>
+              <a href="https://twitter.com/MerozLab"><img width="42" src="twt_logo.png" alt="Meroz Lab on Twitter"></a>
+            </div>
+            <div class="logo">
+              <img src="TAU_logo.png" alt="Institution Logo">
+            </div>
+        </div>
+    </div>
 </body>
-
 </html>

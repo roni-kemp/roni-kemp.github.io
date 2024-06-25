@@ -9,9 +9,10 @@
             font-family: Arial, sans-serif;
             text-align: center;
             margin: 20px;
+            background-color: #e1baa8;
         }
         .container {
-            max-width: 600px;
+            max-width: 420px;
             margin: 0 auto;
         }
         .logo img {
@@ -20,43 +21,41 @@
             margin-bottom: 20px;
         }
         .video-container {
+            text-align: center;
             position: relative;
-            width: 100%;
             padding-bottom: 56.25%; /* 16:9 aspect ratio */
-            margin-bottom: 20px;            
+            margin-bottom: 30px;            
+        }
+        video {
+            width: 100%; /* Make video fill container */
         }
         .links {
             display: flex;
             justify-content: center;
         }
-        .links a {
-            display: inline-block;
-            margin: 20px 10px;
-            text-decoration: none;
-            color: #333;
-        }
         .links a:hover {
             text-decoration: underline;
+        }
+        .video-title {
+            margin-bottom: 10px; /* Spacing between title and video */
+            font-size: 18px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-
-        <h1>Plants Integrate Multiple Stimuli Using a Vectorial Representation</h1>
-        <p></p>
-        
         <div class="video-container">
-            <video width="600" controls loop autoplay muted>
-              <source src="Media1.mp4" type="video/mp4">
-              Your browser does not support HTML video.
+            <h2 class="video-title">Plants Integrate Multiple Stimuli Using a Vectorial Representation</h2>
+            <video controls loop autoplay muted>
+                <source src="Media1.mp4" type="video/mp4">
+                Your browser does not support HTML video.
             </video>
             <div class="links">  
-              <a href="https://www.merozlab.com/"><img width="42" src="meroz_log_inverted.png" alt="Meroz Lab"></a>
-              <a href="https://twitter.com/MerozLab"><img width="42" src="twt_logo.png" alt="Meroz Lab on Twitter"></a>
+                <a href="https://www.merozlab.com/"><img width="42" src="meroz_log_inverted.png" alt="Meroz Lab"></a>
+                <a href="https://twitter.com/MerozLab"><img width="42" src="twt_logo_1.png" alt="Meroz Lab on Twitter"></a>
             </div>
             <div class="logo">
-              <img src="TAU_logo.png" alt="Institution Logo">
+                <img src="TAU_logo_1.png" alt="Institution Logo">
             </div>
         </div>
     </div>
